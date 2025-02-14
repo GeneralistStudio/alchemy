@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'p22-1722-pro', sans-serif;
+    background-color: white;
+    font-size: 35px;
+    color: black;
+    font-style: italic;
+    text-align: center;
+}
+
+/* If you want different backgrounds for each page */
+.index-page {
+    background-image: url('images/background.jpg'); /* Replace with your actual image */
+}
+
+.card-page {
+    background-image: url('images/background.jpg'); /* Replace with your actual image */
+}
+
+header {
+    padding: 20px;
+}
+
+.logo {
+    cursor: pointer !important;
+    width: 250px; /* Adjust size */
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 0px;
+}
+
+.card-container img {
+    cursor: pointer !important;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    will-change: transform;
+    transition: transform 0.1s ease-in-out;
+}
+
+.card-container img:hover {
+    transform: scale(1.02); /* Slightly enlarges the card for effect */
+}
+
+.buttons {
+    cursor: pointer !important;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Adjust this value to increase/decrease spacing */
+}
+
+button {
+    cursor: pointer !important;
+    background: linear-gradient(180deg, #65fc00, #000000); /* Gradient */
+    border: 1px solid black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: 'p22-1722-pro', sans-serif;
+    font-style: italic;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.3s;
+    flex: 1; /* makes buttons scale proportionally */
+    width: 150px;  /* Adjust width as needed */
+    height: 60px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px rgb(123, 123, 123);
+}
+
+.card-description {
+    font-size: 20px; /* Change font size */
+    color: #333; /* Change text color */
+    font-family: "itc-benguiat", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5; /* Adjust line height for readability */
+    margin-top: 10px; /* Space above the description */
+    padding: 20px; /* Padding inside the description */
+    text-align: center; /* Center the description text */
+}
+
+/* Define the spinning animation */
+@keyframes spin {
+    0% {
+        transform: scaleX(1); /* Start at scale of 1 on x */
+    }
+    50% {
+        transform: scaleX(0.001); /* 50% scale of 0.1 on x */
+    }
+    100% {
+        transform: scaleX(1); /* End on scale of 1 on x */
+    }
+}
+
+/* Default styling for the image */
+.card-container img {
+    transition: transform 0.5s ease-in-out; /* Ensure smooth transition */
+}
+
+/* Add spinning effect when class is added */
+.spin-card {
+    animation: spin 0.5s ease-in-out; /* Spin the card over 0.5 second */
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media (Gif/Video) */
+.media-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.media {
+    width: 100%; /* Adjust to fit the container */
+    max-width: 800px; /* Maximum size */
+    object-fit: cover;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-container {
+    position: fixed;    
+    bottom: 10px;;
+    left: 0;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 500px;
+}
+
+.paragraph {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    color: black;
+    font-family: "itc-benguiat", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    margin-top: 50px;
+}
