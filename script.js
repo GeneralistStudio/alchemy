@@ -1,6 +1,6 @@
 
 // Store card image file names in an array
-let cards = Array.from({ length: 20 }, (_, i) => `images/card${i + 1}.png`);
+let cards = Array.from({ length: 20 }, (_, i) => `images/card${i + 1}.gif`);
 let deck = [...cards]; // Copy of the full deck
 
 // Card descriptions (example descriptions, modify as needed)
