@@ -12,10 +12,12 @@ body {
 /* If you want different backgrounds for each page */
 .index-page {
     background-image: url('images/background.jpg'); /* Replace with your actual image */
+    background-size: cover;
 }
 
 .card-page {
     background-image: url('images/background.jpg'); /* Replace with your actual image */
+    background-size: cover;
 }
 
 header {
@@ -155,7 +157,8 @@ button:hover {
     width: 100%;
     font-family: sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    line-height: 15px;
+    font-size: 11px;
     font-style: normal;
     margin-top: 500px;
 }
