@@ -8,5 +8,5 @@ document.getElementById("cardDescription").innerText = cardDescription;
 
 // Redraw button logic
 document.getElementById("redrawBtn").addEventListener("click", () => {
-    window.location.href = "index.html"; // Go back to main page for a new draw
+    window.location.href = "tarot.html"; // Go back to main page for a new draw
 });
