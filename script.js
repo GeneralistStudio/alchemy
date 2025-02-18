@@ -57,22 +57,25 @@ function drawCard() {
 // Initial shuffle when the page loads
 shuffleDeck();
 
-// Attach event listeners
-document.getElementById("shuffleBtn").addEventListener("click", () => {
-    shuffleDeck();
-    document.getElementById("cardImage").src = "images/default.png"; // Reset to back of card
-    
-    // Add the spin-card class to trigger the animation
-    const cardImage = document.getElementById('cardImage');
-    cardImage.classList.add('spin-card');
-    
-    // After the animation completes, remove the class to reset for the next shuffle
-    setTimeout(() => {
-        cardImage.classList.remove('spin-card');
-    }, 1000); // 1000ms matches the duration of the animation
-});
-
+// Attach event listener to the "Draw" button
 document.getElementById("drawBtn").addEventListener("click", drawCard);
 
 // Attach event listener to the default card image
 document.getElementById("cardImage").addEventListener("click", drawCard);
+
+// Cursor Trail Effect
+document.addEventListener("mousemove", function(event) {
+    const trail = document.createElement("div");
+    trail.classList.add("cursor-trail");
+
+    // Position the trail at the cursor location
+    trail.style.left = `${event.clientX}px`;
+    trail.style.top = `${event.clientY}px`;
+
+    document.body.appendChild(trail);
+
+    // Remove the trail after animation ends
+    setTimeout(() => {
+        trail.remove();
+    }, 500);
+});

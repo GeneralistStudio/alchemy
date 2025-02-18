@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/beg7yli.css">
     <link rel="stylesheet" href="https://use.typekit.net/beg7yli.css">
     <meta charset="UTF-8">
@@ -8,20 +10,41 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="home-page">
+<body class="home-page">
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="home-container">
         <div class="media-container">
             <img src="images/homeLogo.gif" alt="Media Content" class="media">
         </div>
         <div class="button-container">
-            <button id="watchBtn">Watch</button>
-            <a href="tarot.html"><button id="playBtn">Play</button></a>
-            <a href="store.html"><button id="shopBtn">Shop</button></a>
+            <a href="https://youtu.be/zeOSPyb2UHU"><button id="watchBtn">WATCH</button></a>
+            <a href="tarot.html"><button id="playBtn">PLAY</button></a>
+            <a href="store.html"><button id="shopBtn">SHOP</button></a>
         </div>
         <div class="footer-container">
             <p> ©2025 GENERALIST LLC & OJAHARA, ALL RIGHTS RESERVED.<br>3D RENDERING STOCK VIDEO BY <a href="https://www.vecteezy.com/free-videos/3d-rendering">VECTEEZY</a>
             </p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("mousemove", (e) => {
+            // Create a trail element
+            let trail = document.createElement("div");
+            trail.classList.add("trail");
+            document.body.appendChild(trail);
+
+            // Position the trail at the cursor
+            trail.style.left = `${e.clientX}px`;
+            trail.style.top = `${e.clientY}px`;
+
+            // Fade out and remove
+            setTimeout(() => {
+                trail.style.opacity = "0";
+                setTimeout(() => trail.remove(), 400); // Remove after fade-out
+            }, 50);
+        });
+    </script>
+
 </body>
 </html>
