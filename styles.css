@@ -51,7 +51,7 @@ header {
 
 .logo {
     cursor: url('http://www.rw-designer.com/cursor-extern.php?id=206776') 20 20, pointer !important;
-    width: 200px; /* Adjust size */
+    width: 250px; /* Adjust size */
     display: block;
     margin: 0 auto;
 }
