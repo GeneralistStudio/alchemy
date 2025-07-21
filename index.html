@@ -22,28 +22,32 @@
             <a href="store.html"><button id="shopBtn">SHOP</button></a>
         </div>
         <div class="footer-container">
-            <p> ©2025 GENERALIST LLC & OJAHARA, ALL RIGHTS RESERVED.<br>3D RENDERING STOCK VIDEO BY <a href="https://www.vecteezy.com/free-videos/3d-rendering">VECTEEZY</a>
+            <p> ©2025 GENERALIST LLC & OJAHARA, ALL RIGHTS RESERVED.</a>
             </p>
         </div>
     </div>
 
+    <!-- Hand element for desktop only -->
+    <div class="hand-container">
+        <div class="names-list">
+            <div class="name">CREDITS:</div>
+            <div class="name"> </div>
+            <div class="name">WEBSITE</div>
+            <div class="name">Ryan Lettieri</div>
+            <div class="name"> </div>
+            <div class="name">VIDEO</div>
+            <div class="name">Zoe Lee</div>
+            <div class="name">Louis Hand</div>
+            <div class="name">Mayuko Kobayashi</div>
+            <div class="name">Bella Borgh</div>
+            <div class="name">Ryan Lettieri</div>
+            <div class="name">Lindsay Ju</div>
+            <div class="name">Ali Lee</div>
+        </div>
+        <img src="images/hand-closed.webp" alt="Hand" class="hand-image">
+    </div>
+
     <script>
-        document.addEventListener("mousemove", (e) => {
-            // Create a trail element
-            let trail = document.createElement("div");
-            trail.classList.add("trail");
-            document.body.appendChild(trail);
-
-            // Position the trail at the cursor
-            trail.style.left = `${e.clientX}px`;
-            trail.style.top = `${e.clientY}px`;
-
-            // Fade out and remove
-            setTimeout(() => {
-                trail.style.opacity = "0";
-                setTimeout(() => trail.remove(), 400); // Remove after fade-out
-            }, 50);
-        });
     </script>
 
 </body>

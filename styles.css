@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+html, body {
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=206777'), auto !important;
+}
+
 /* Original desktop styles preserved */
 body {
     cursor: url('http://www.rw-designer.com/cursor-extern.php?id=206777'), auto;
@@ -9,6 +13,10 @@ body {
     color: black;
     font-style: italic;
     text-align: center;
+}
+
+.index-page *, .card-page *, .store-page * {
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=206777'), auto !important;
 }
 
 /* If you want different backgrounds for each page */
@@ -34,7 +42,6 @@ body {
     background-repeat: repeat;  /* Tiling in both directions */
     overflow: hidden;
     background-size: auto; /* Keeps the original size of the GIF */
-    cursor: none; /* Hide default cursor */
 }
 
 .store-page {
@@ -266,8 +273,63 @@ button:hover {
     font-style: normal;
 }
 
+/* Hand container styles - Desktop only */
+.hand-container {
+    position: fixed;
+    bottom: -10px;
+    right: 0px;
+    z-index: 1000;
+}
+
+.hand-image {
+    width: 80px;
+    height: auto;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=206776') 20 20, pointer !important;
+    transition: all 0.3s ease;
+}
+
+.hand-container:hover .hand-image {
+    content: url('images/hand-open.webp');
+}
+
+.names-list {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.hand-container:hover .names-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.name {
+    color: white;
+    font-family: "itc-benguiat", serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 3px 0;
+    text-align: right;
+}
+
+
 /* MOBILE-ONLY CHANGES - Desktop styles preserved above */
 @media screen and (max-width: 768px) {
+    /* Hide hand container on mobile */
+    .hand-container {
+        display: none;
+    }
+    
     /* Basic mobile adjustments */
     body {
         font-size: clamp(16px, 5vw, 28px);
